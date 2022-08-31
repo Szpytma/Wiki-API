@@ -15,6 +15,10 @@ mongoose.connect(dbUrl);
 const articleSchema = { title: String, content: String };
 const Article = mongoose.model("Article", articleSchema);
 
+app.get("/", function (req, res) {
+  res.sendFile("/index.html");
+});
+
 app
   .route("/articles")
   /// Request targeting all articles
