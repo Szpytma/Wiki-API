@@ -6,7 +6,7 @@ const app = express();
 const localDbUrl = "mongodb://localhost:27017/wikiDB";
 const dbUrl = "mongodb+srv://admin:1239875@cluster0.wer1qxy.mongodb.net/wikiDB";
 
-app.set("view engine", ejs);
+app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.listen(3000 || process.env.PORT);
